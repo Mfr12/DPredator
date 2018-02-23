@@ -12,7 +12,7 @@ def get():
         get = get
     os.system("clear")
     return get
-
+print("{SMS Phishing}\n")
 print("Choose your Method:\n{1} Kavenegar\n{2} Twillo")
 method = get()
 os.system("clear")
