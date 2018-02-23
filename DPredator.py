@@ -33,21 +33,25 @@ class DPredator:
         if a == 1:
             os.system("clear")
             print("{Phishing}\n")
-            print("{1}SMS\n")
+            print("{1}SMS\n\n{0}Back to Main Menu")
             a = self.get()
             if a == 1:
                 import SMS
                 DPredator()
+            elif a == 0:
+                DPredator()
         elif a == 2:
             os.system("clear")
             print("{Utilities}\n")
-            print("{1}Temporary Email\n{2}Fake Name Generator\n")
+            print("{1}Temporary Email\n{2}Fake Name Generator\n\n{0}Back to Main Menu")
             a = self.get()
             if a == 1:
                 os.system("python EMail.py")
                 DPredator()
-            if a == 2:
+            elif a == 2:
                 import Fake
+                DPredator()
+            elif a == 0:
                 DPredator()
 
     def get(self):
