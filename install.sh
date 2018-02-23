@@ -83,9 +83,11 @@ pip3 install -r require.txt
 
 if [ -d "$INSTALL_DIR" ] ;
 then
+    clear
     echo "Tool installed ;-)";
     echo "Just type dpredator in your terminal.";
 else
+    clear
     echo "Installation failed!";
     exit
 fi
