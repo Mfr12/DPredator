@@ -16,19 +16,19 @@ echo "
 ";
 
 if [ "$PREFIX" = "/data/data/com.termux/files/usr" ]; then
-    INSTALL_DIR="$PREFIX/usr/share/doc/DPredator"
+    INSTALL_DIR="$PREFIX/usr/share/doc/dpredator"
     BIN_DIR="$PREFIX/bin/"
     BASH_PATH="$PREFIX/bin/bash"
     TERMUX=true
 
     pkg install -y git python3
 elif [ "$(uname)" = "Darwin" ]; then
-    INSTALL_DIR="/usr/local/DPredator"
+    INSTALL_DIR="/usr/local/dpredator"
     BIN_DIR="/usr/local/bin/"
     BASH_PATH="/bin/bash"
     TERMUX=false
 else
-    INSTALL_DIR="$HOME/.DPredator"
+    INSTALL_DIR="$HOME/.dpredator"
     BIN_DIR="/usr/local/bin/"
     BASH_PATH="/bin/bash"
     TERMUX=false
@@ -38,15 +38,15 @@ fi
 
 echo "[✔] Checking directories...";
 if [ -d "$INSTALL_DIR" ]; then
-    echo "[◉] A directory DPredator was found! Do you want to replace it? [Y/n]:" ;
+    echo "[◉] A directory dpredator was found! Do you want to replace it? [Y/n]:" ;
     read mama
     if [ "$mama" = "y" ]; then
         if [ "$TERMUX" = true ]; then
             rm -rf "$INSTALL_DIR"
-            rm "$BIN_DIR/DPredator*"
+            rm "$BIN_DIR/dpredator*"
         else
             sudo rm -rf "$INSTALL_DIR"
-            sudo rm "$BIN_DIR/DPredator*"
+            sudo rm "$BIN_DIR/dpredator*"
         fi
     else
         echo "[✘] If you want to install you must remove previous installations [✘] ";
@@ -66,31 +66,26 @@ fi
 
 echo "[✔] Installing ...";
 echo "";
-git clone --depth=1 https://github.com/Mfr12/DPredator "$INSTALL_DIR";
+git clone --depth=1 https://github.com/Mfr12/dpredator "$INSTALL_DIR";
 echo "#!$BASH_PATH
-python3 $INSTALL_DIR/DPredator.py" '${1+"$@"}' > "$INSTALL_DIR/DPredator";
-chmod +x "$INSTALL_DIR/DPredator";
+python3 $INSTALL_DIR/dpredator.py" '${1+"$@"}' > "$INSTALL_DIR/dpredator";
+chmod +x "$INSTALL_DIR/dpredator";
 if [ "$TERMUX" = true ]; then
-    cp "$INSTALL_DIR/DPredator" "$BIN_DIR"
-    cp "$INSTALL_DIR/DPredator.cfg" "$BIN_DIR"
+    cp "$INSTALL_DIR/dpredator" "$BIN_DIR"
+    cp "$INSTALL_DIR/dpredator.cfg" "$BIN_DIR"
 else
-    sudo cp "$INSTALL_DIR/DPredator" "$BIN_DIR"
-    sudo cp "$INSTALL_DIR/DPredator.cfg" "$BIN_DIR"
+    sudo cp "$INSTALL_DIR/dpredator" "$BIN_DIR"
+    sudo cp "$INSTALL_DIR/dpredator.cfg" "$BIN_DIR"
 fi
-rm "$INSTALL_DIR/DPredator";
+rm "$INSTALL_DIR/dpredator";
 
 pip3 install -r require.txt
 
 if [ -d "$INSTALL_DIR" ] ;
 then
-    echo "";
-    echo "[✔] Tool installed successfully! [✔]";
-    echo "";
-    echo "[✔]====================================================================[✔]";
-    echo "[✔]      All is done!! You can execute tool by typing DPredator !       [✔]";
-    echo "[✔]====================================================================[✔]";
-    echo "";
+    echo "Tool installed ;-)";
+    echo "Just type dpredator in your terminal.";
 else
-    echo "[✘] Installation failed! [✘] ";
+    echo "Installation failed!";
     exit
 fi
