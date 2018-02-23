@@ -32,7 +32,7 @@ class DPredator:
 
         if a == 1:
             os.system("clear")
-            print("{Phising}\n")
+            print("{Phishing}\n")
             print("{1}SMS\n\n{0}Back to Main Menu")
             a = self.get()
             if a == 1:
