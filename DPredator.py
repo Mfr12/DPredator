@@ -43,13 +43,16 @@ class DPredator:
         elif a == 2:
             os.system("clear")
             print("{Utilities}\n")
-            print("{1}Temporary Email\n{2}Fake Name Generator\n\n{0}Back to Main Menu")
+            print("{1}Temporary Email\n{2}Fake Name Generator\n{3}CryptoCurrency\n\n{0}Back to Main Menu")
             a = self.get()
             if a == 1:
                 os.system("python EMail.py")
                 DPredator()
             elif a == 2:
                 import Fake
+                DPredator()
+            elif a == 3:
+                import Crypto
                 DPredator()
             elif a == 0:
                 DPredator()
