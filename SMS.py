@@ -22,7 +22,7 @@ print("Enter your Victim Phone Number (With +98): ")
 phone = get()
 if method == 1:
     try:
-        api = KavenegarAPI('Put Your API Key Here')
+        api = KavenegarAPI('334164386C6A79304F6D6B597645744D5765634D4A686161676E696864493965')
         params = {
         'sender': '',
         'receptor': str(phone).replace("+98","0"),
@@ -35,8 +35,8 @@ if method == 1:
     wait = input("Press [Enter] to go back...")
 elif method == 2:
     try:
-        account_sid = "Put Your Sid Account Token Here"
-        auth_token = "Put Your auth_token Here"
+        account_sid = "AC550e96a4047b7b3ac04217e3d40745d2"
+        auth_token = "9f482b34cacad639a4c185e81e0cd625"
 
         client = Client(account_sid, auth_token)
 
