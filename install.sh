@@ -86,6 +86,7 @@ then
     clear
     echo "Tool installed ;-)";
     echo "Just type dpredator in your terminal.";
+    echo "";
 else
     clear
     echo "Installation failed!";
