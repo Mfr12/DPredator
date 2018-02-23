@@ -26,7 +26,7 @@ class DPredator:
         print(banner + colored(banner2,'red'))
         print("Never So Late @M_F_R\n")
 
-        print("{1}Phishing\n{2}Utilities")
+        print("{1}Phishing\n{2}Utilities\n\n{exit}Exit")
 
         a = self.get()
 
@@ -53,6 +53,8 @@ class DPredator:
                 DPredator()
             elif a == 0:
                 DPredator()
+        elif a == "exit":
+            os.system("exit")
 
     def get(self):
         get = input("\nDPredator@ ")
