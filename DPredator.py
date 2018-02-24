@@ -69,7 +69,7 @@ class DPredator:
             print("{1}Nmap\n")
             a = self.get()
             if a == 1:
-                import Nmap
+                from Nmap import NMAP
         elif a == "0":
             os.system("exit")
 
