@@ -66,10 +66,12 @@ class DPredator:
         elif a == 3:
             os.system("clear")
             print("{Information Grabbing}\n")
-            print("{1}Nmap\n")
+            print("{1}Nmap\n{2}WpScan\n")
             a = self.get()
             if a == 1:
                 from Nmap import NMAP
+            if a == 2:
+                import WPSCAN
         elif a == "0":
             os.system("exit")
 
