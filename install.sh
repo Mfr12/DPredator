@@ -68,7 +68,7 @@ echo "[✔] Installing ...";
 echo "";
 git clone --depth=1 https://github.com/Mfr12/dpredator "$INSTALL_DIR";
 echo "#!$BASH_PATH
-python3 $INSTALL_DIR/dpredator.py" '${1+"$@"}' > "$INSTALL_DIR/dpredator";
+python3 $INSTALL_DIR/DPredator.py" '${1+"$@"}' > "$INSTALL_DIR/dpredator";
 chmod +x "$INSTALL_DIR/dpredator";
 if [ "$TERMUX" = true ]; then
     cp "$INSTALL_DIR/dpredator" "$BIN_DIR"
