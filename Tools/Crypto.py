@@ -22,3 +22,4 @@ print("Litecoin -> " + e)
 
 wait = input("\nPress [Enter] to go back...")
 os.system("rm data.json")
+os.system("python3 DPredator.py")

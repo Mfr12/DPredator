@@ -51,3 +51,4 @@ else:
         except:
             print("An Error Occurred")
         wait = input("Press [Enter] to go back...")
+        os.system("python3 DPredator.py")

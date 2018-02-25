@@ -19,4 +19,4 @@ elif a == 2:
 elif a == 3:
     os.system("ruby wpscan/wpscan.rb " + host + " --enumerate")
 elif a == 0:
-    pass
+    os.system("python3 DPredator.py")

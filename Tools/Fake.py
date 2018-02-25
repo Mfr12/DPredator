@@ -17,3 +17,4 @@ print("Email: " + fake.ascii_email())
 print("Job: " + fake.job())
 
 wait = input("\nPress [Enter] to go back...")
+os.system("python3 DPredator.py")

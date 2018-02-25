@@ -37,3 +37,5 @@ class NMAP:
 while True:
     if repeat == "y":
         NMAP()
+    else:
+        os.system("python3 DPredator.py")

@@ -26,3 +26,5 @@ while True:
         if ask == "n" or ask == "N":
             os.system("rm " + result["Sender"].replace(" ","") + ".html")
     time.sleep(5)
+
+os.system("python3 DPredator.py")
