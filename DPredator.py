@@ -66,7 +66,7 @@ class DPredator:
         elif a == 3:
             os.system("clear")
             print("{Information Grabbing}\n")
-            print("{1}Nmap\n{2}WpScan\n{3}CMS Map (WordPress, Joomla, Drupal)\n{4}XSS Detection\n\n{0}Main Menu")
+            print("{1}Nmap\n{2}WpScan\n{3}CMS Map (WordPress, Joomla, Drupal)\n{4}XSS Detection\n{5}Doork (Googling Tool)\n\n{0}Main Menu")
             a = self.get()
             if a == 1:
                 os.system("python3 Tools/Nmap.py")
@@ -76,6 +76,8 @@ class DPredator:
                 os.system("python3 Tools/CMS.py")
             elif a == 4:
                 os.system("python3 Tools/XSS.py")
+            elif a == 5:
+                os.system("python3 Tools/DORK.py")
             elif a == 0:
                 DPredator()
         elif a == 4:
