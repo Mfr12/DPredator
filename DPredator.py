@@ -26,7 +26,7 @@ class DPredator:
         print(banner + colored(banner2,'red'))
         print("Never So Late @M_F_R\n")
 
-        print("{1}Phishing\n{2}Utilities\n{3}Information Grabbing\n{0}Exit")
+        print("{1}Phishing\n{2}Utilities\n{3}Information Grabbing\n{4}Social Engineering\n\n{0}Exit")
 
         a = self.get()
 
@@ -66,12 +66,24 @@ class DPredator:
         elif a == 3:
             os.system("clear")
             print("{Information Grabbing}\n")
-            print("{1}Nmap\n{2}WpScan\n")
+            print("{1}Nmap\n{2}WpScan\n{3}CMS Map (WordPress, Joomla, Drupal)\n{0}Main Menu")
             a = self.get()
             if a == 1:
                 from Nmap import NMAP
-            if a == 2:
+            elif a == 2:
                 import WPSCAN
+            elif a == 3:
+                os.system("python3 Tools/CMS.py")
+            elif a == 0:
+                DPredator()
+        elif a == 4:
+            os.system("clear")
+            print("{Social Engineering}\n\n{1}QR Code\n\n{0}Main Menu")
+            a = self.get()
+            if a == 1:
+                import QRCODE
+            elif a == 0:
+                DPredator()
         elif a == "0":
             os.system("exit")
 
