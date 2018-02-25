@@ -1,7 +1,6 @@
 #!/usr/bin/python
 
 import os
-from DPredator import DPredator
 
 check = os.path.isdir("wpscan")
 if not check:
@@ -21,4 +20,3 @@ elif a == 3:
     os.system("ruby wpscan/wpscan.rb " + host + " --enumerate")
 elif a == 0:
     pass
-DPredator()

@@ -1,7 +1,6 @@
 #!/usr/bin/python
 
 import os
-from DPredator import DPredator
 
 repeat = "y"
 class NMAP:
@@ -38,5 +37,3 @@ class NMAP:
 while True:
     if repeat == "y":
         NMAP()
-    else:
-        DPredator()

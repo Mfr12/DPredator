@@ -36,7 +36,7 @@ class DPredator:
             print("{1}SMS\n\n{0}Back to Main Menu")
             a = self.get()
             if a == 1:
-                import SMS
+                os.system("python3 Tools/SMS.py")
                 DPredator()
             elif a == 0:
                 DPredator()
@@ -46,13 +46,13 @@ class DPredator:
             print("{1}Temporary Email\n{2}Fake Name Generator\n{3}CryptoCurrency\n{4}Domail to IP\n\n{0}Back to Main Menu")
             a = self.get()
             if a == 1:
-                os.system("python EMail.py")
+                os.system("python Tools/EMail.py")
                 DPredator()
             elif a == 2:
-                import Fake
+                os.system("python3 Tools/Fake.py")
                 DPredator()
             elif a == 3:
-                import Crypto
+                os.system("python3 Tools/Crypto.py")
                 DPredator()
             elif a == 4:
                 print("{Domain to IP}\n")
@@ -69,9 +69,9 @@ class DPredator:
             print("{1}Nmap\n{2}WpScan\n{3}CMS Map (WordPress, Joomla, Drupal)\n{0}Main Menu")
             a = self.get()
             if a == 1:
-                from Nmap import NMAP
+                os.system("python3 Tools/Nmap.py")
             elif a == 2:
-                import WPSCAN
+                os.system("python3 Tools/WPSCAN.py")
             elif a == 3:
                 os.system("python3 Tools/CMS.py")
             elif a == 0:
@@ -81,7 +81,7 @@ class DPredator:
             print("{Social Engineering}\n\n{1}QR Code\n\n{0}Main Menu")
             a = self.get()
             if a == 1:
-                import QRCODE
+                os.system("python3 Tools/QRCODE.py")
             elif a == 0:
                 DPredator()
         elif a == "0":

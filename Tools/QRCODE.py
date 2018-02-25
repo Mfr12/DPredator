@@ -1,6 +1,5 @@
 #!/usr/bin/python
 import os
-from DPredator import DPredator
 
 try:
     import qrcode
@@ -11,4 +10,3 @@ a = input("{QR Code}\n\nEnter your text: ")
 qr = qrcode.make(a)
 qr.show()
 wait = input("Press [Enter] to go back...")
-DPredator()
