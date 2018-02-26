@@ -7,6 +7,6 @@ if os.path.isdir("Tools/CMSmap") == True:
 else:
     os.system("cd Tools && git clone https://github.com/Dionach/CMSmap.git")
 host = input("{CMS Map}\n\nEnter Your Host: ")
-os.system("cd Tools/CMSmap && python2 cmsmap.py -t " + host)
+os.system("cd Tools/CMSmap && python cmsmap.py -t " + host)
 wait = input("Press [Enter] to go back...")
 os.system("python3 DPredator.py")
