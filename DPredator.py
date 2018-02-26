@@ -26,7 +26,7 @@ class DPredator:
         print(colored(banner,'white') + colored(banner2,'red'))
         print("Never So Late @M_F_R\n")
 
-        print("{1}Phishing\n{2}Utilities\n{3}Information Grabbing\n{4}Social Engineering\n\n{0}Exit")
+        print("{1}Phishing\n{2}Utilities\n{3}Information Grabbing\n{4}Social Engineering\n{5}Password Attacking\n\n{0}Exit")
 
         a = self.get()
 
@@ -88,7 +88,13 @@ class DPredator:
                 os.system("python3 Tools/QRCODE.py")
             elif a == 0:
                 DPredator()
-        elif a == "0":
+        elif a == 5:
+            os.system("clear")
+            print("{Passwords Attacking}\n\n{1}Common User Passwords Profiler\n\n{0}Main Menu")
+            a = self.get()
+            if a == 1:
+                os.system("python3 Tools/CUPP.py")
+        elif a == 0:
             os.system("exit")
 
     def get(self):
