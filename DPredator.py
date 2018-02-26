@@ -94,6 +94,8 @@ class DPredator:
             a = self.get()
             if a == 1:
                 os.system("python3 Tools/CUPP.py")
+            '''elif a == 2:
+                os.system("python3 Tools/BRUTEX.py")'''
         elif a == 0:
             os.system("exit")
 
