@@ -46,7 +46,7 @@ class DPredator:
             print("{1}Temporary Email\n{2}Fake Name Generator\n{3}CryptoCurrency\n{4}Domail to IP\n\n{0}Back to Main Menu")
             a = self.get()
             if a == 1:
-                os.system("python Tools/EMail.py")
+                os.system("python2 Tools/EMail.py")
                 DPredator()
             elif a == 2:
                 os.system("python3 Tools/Fake.py")
