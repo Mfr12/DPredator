@@ -64,6 +64,9 @@ if [ -d "$ETC_DIR/Mfr12" ]; then
     fi
 fi
 
+cd "$INSTALL_DIR"
+echo "some data for the file" >> path.txt
+
 echo "[✔] Installing ...";
 echo "";
 git clone --depth=1 https://github.com/Mfr12/dpredator "$INSTALL_DIR";
@@ -84,6 +87,7 @@ pip3 install -r require.txt
 if [ -d "$INSTALL_DIR" ] ;
 then
     clear
+
     echo "Tool installed ;-)";
     echo "Just type dpredator in your terminal.";
     echo "";
