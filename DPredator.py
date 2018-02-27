@@ -93,7 +93,6 @@ class DPredator:
             print("{Passwords Attacking}\n\n{1}Common User Passwords Profiler\n\n{0}Main Menu")
             a = self.get()
             if a == 1:
-                os.system("echo $PWD")
                 os.system("python3 Tools/CUPP.py")
             '''elif a == 2:
                 os.system("python3 Tools/BRUTEX.py")'''
